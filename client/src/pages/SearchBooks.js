@@ -129,6 +129,11 @@ const SearchBooks = () => {
                       {savedBookIds?.some((savedBookId) => savedBookId === book.bookId)
                         ? 'This book has already been saved!'
                         : 'Save this Book!'}
+                        {error && (
+                        <div className="my-3 p-3 bg-danger text-white">
+                          {error.message}
+                        </div>
+                      )}
                     </Button>
                   )}
                 </Card.Body>
